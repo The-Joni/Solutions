@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --font-size-xs: clamp(0.5, 0.10vw + 0.55rem, 0.65);
+    --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+    --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+    --font-size-xlg: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+    --font-size-xxlg: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --font-size-xxxlg: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+    color: var(--white);
+}
+body{
+    background-color: var(--very-dark-blue);
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    background-color: var(--dark-blue);
+    background: linear-gradient(0deg, rgba(28,32,38,1) 0%, rgba(28,34,45,1) 100%);
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
+.image{
+    padding: 25px 0;
+}
+.rating{
+    background-color: var(--dark-blue);
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 25px;
+}
+h2, span{
+    font-size: var(--font-size-sm);
+    color: var(--orange);
+}
+
+.text{
+    padding: 25px 0;
+}
+
+h1{
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    padding: 10px
+}
+
+p{
+    font-size: var(--font-size-sm);
+    color: var(--light-grey);
+    line-height: 1.5;
+    display: inline-flex;
+}
+@media screen and (max-width:460px) {
+    .wrapper{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:220px){
+    .image{
+        overflow: hidden;
+    }
+    img{
+        width: 100%;
+    }
+}
